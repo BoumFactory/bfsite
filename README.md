@@ -1,16 +1,16 @@
-﻿# Math Vitrine - Site de Ressources Pédagogiques
+﻿# Site de Ressources Pédagogiques
 
-Ce projet est un site web vitrine destiné aux enseignants de mathématiques pour partager des ressources.
+Ce projet est un site web destiné aux enseignants de mathématiques pour partager des ressources.
 
 ## Installation
 
 1. Clonez ce dépôt :
    
-   git clone https://github.com/votre-repo/math-vitrine.git
+   git clone https://github.com/BoumFactory/bfsite.git
    
 2. Accédez au dossier :
    
-   cd BFsite
+   cd bfsite
    
 3. Installez les dépendances :
    
