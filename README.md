@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# Math Vitrine - Site de Ressources Pédagogiques
 
-## Getting Started
+Ce projet est un site web vitrine destiné aux enseignants de mathématiques pour partager des ressources.
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clonez ce dépôt :
+   
+   git clone https://github.com/votre-repo/math-vitrine.git
+   
+2. Accédez au dossier :
+   
+   cd BFsite
+   
+3. Installez les dépendances :
+   
+   npm install
+   
+4. Démarrez le projet en local :
+   
+   npm run dev
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site sera accessible à [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pour les devs
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Script permettant d'afficher la structure du projet (dans bfsite) : .\dev_tools\listing_activities.ps1
 
-## Learn More
+Script permettant d'afficher la liste de TODOS (dans bfsite) : python dev_tools/find_todos.py
 
-To learn more about Next.js, take a look at the following resources:
+Script permettant d'indexer les fichiers de public/files et de générer le json qui contientra ses tags : 
+python dev_tools/indexing_public_files.py
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+fichier de sortie : pages\files_index.json

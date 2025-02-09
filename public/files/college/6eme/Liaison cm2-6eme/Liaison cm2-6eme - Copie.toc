@@ -1,0 +1,7 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}La course aux nombres}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}La course aux nombres}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Liste des défis}{3}{section.2}%
+\contentsline {section}{\numberline {3}Cartes des défis}{9}{section.3}%
