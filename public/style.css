@@ -1,0 +1,296 @@
+/* css/style.css */
+
+body {
+    padding: 2rem;
+    background-color: #f4f4f4;
+  }
+  
+  /* Mode grille pour le conteneur des questions */
+  #exercise-content.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* Mode "single" : affichage en bloc (une seule question à la fois) */
+  #exercise-content.single {
+    display: center;
+    text-align: center;
+  }
+  
+  /* Conteneur de chaque question */
+  .question {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Style de l'énoncé (lignes d'équation) */
+  .equation {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Style des champs de saisie mathématiques (MathLive <math-field>) */
+  .math-field {
+    border-color: #0f62fe;
+    border: 1px solid #8d8d8d;
+    border-radius: 4px;
+    box-shadow: 0 0 0 3px rgba(15, 98, 254, 0.3);
+    text-align: center;
+    outline: none;
+  }
+
+  .math-answer {
+    display: inline-block;
+    min-width: 60px;
+    max-width: 150px;
+    margin: 0 5px;
+    border: 1px solid #8d8d8d;
+    border-radius: 4px;
+    padding: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .math-answer:focus {
+    border-color: #0f62fe;
+    box-shadow: 0 0 0 3px rgba(15, 98, 254, 0.3);
+    outline: none;
+  }
+  /* Styles pour la correction */
+  .answer-correct {
+    border: 2px solid #90ee90; /* Vert clair */
+    box-shadow: 0 0 5px #90ee90;
+  }
+
+  .answer-incorrect {
+    border: 2px solid #f08080; /* Rouge clair */
+    box-shadow: 0 0 5px #f08080;
+  }
+
+  .feedback-icon {
+    margin-left: 5px;
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+
+  /* Style optionnel pour la correction */
+  .correction {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #e0f7fa;
+    border-left: 10px solid #0f62fe;
+  }
+select {
+  padding: 4px;
+  border: 1px solid #888;
+  border-radius: 4px;
+}
+
+.tabular-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.tabular-row {
+  /* Exemples : alternance de couleur de fond pour les lignes */
+  background-color: #f9f9f9;
+}
+
+.tabular-row:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+.tabular-cell {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center; /* ou left/right en fonction de la "forme" */
+}
+
+.accentued {
+  font-weight: bold;
+  color: #cc649f; /* Exemple de couleur */
+}
+.hfill {
+  /* Ce style suppose que le parent est en display: flex */
+  margin-left: auto;
+}
+/* Style pour l'environnement multicols en cas d'utilisation de CSS columns */
+.multicols {
+  column-gap: 1em;
+}
+
+/* Styles pour les listes énumérées */
+ol.latex-enumerate {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+/* Styles pour les listes non ordonnées */
+ul.latex-itemize {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+/* Style commun pour les éléments de liste */
+li.latex-list-item {
+  margin-bottom: 0.5em;
+}
+
+.boite {
+  /* Bordure principale autour de la boîte */
+  border: 2px solid #2b63f1;
+  border-radius: 5px;
+  margin: 1em 0;
+  /* Évite que le titre et le contenu dépassent si on applique un rayon de bordure */
+  overflow: hidden;
+}
+
+/* Bande de titre */
+.boite-titre {
+  background-color: #2b63f1;  /* Couleur de fond de la bande */
+  color: #fff;               /* Couleur du texte */
+  font-weight: bold;         /* Titre en gras */
+  padding: 0.5em 1em;        /* Espacement interne horizontal et vertical */
+  /* Petite bordure en bas pour séparer du contenu, optionnel */
+  border-bottom: 2px solid #2b63f1;
+}
+
+/* Zone de contenu */
+.boite-contenu {
+  background-color: #f8f9fa;  /* Couleur légèrement grise/bleutée, à ajuster */
+  padding: 1em;
+}
+
+/* Mode agrandi : le container devient un overlay couvrant tout le body */
+.ggb-expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff; /* Fond blanc pour bien distinguer */
+  z-index: 10000; /* Au-dessus de tout */
+  padding: 1em;
+  box-sizing: border-box;
+  overflow: auto; /* Pour pouvoir faire défiler si nécessaire */
+}
+
+/* Optionnel : adapter l'applet GeoGebra en mode agrandi */
+.ggb-expanded div[id^="ggb-element-"] {
+  width: 100%;
+  height: 100%;
+}
+.ggb-container {
+  display: inline-block;
+  margin: 1em 0;
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.resizer {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* Style pour le sélecteur d'exercice */
+#exercise-selector {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  margin: 0.5rem 0;
+}
+
+/* Style pour le bouton "Charger" */
+#load-exercise-button {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0.5rem 0;
+}
+
+/* Effet au survol */
+#load-exercise-button:hover {
+  background-color: #e5e5e5;
+}
+
+/* Style toggle lorsque le bouton a été cliqué */
+#load-exercise-button:focus {
+  background-color: #007d3c; /* vert sobre */
+  color: #fff;
+  border-color: #007d3c;
+}
+
+
+  /* Footer */
+footer {
+  margin-top: 40px;
+  width: 100%;
+}
+
+footer .footer-content {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+footer h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+footer p, footer li, footer a {
+  color: #ddd;
+  font-size: 0.9em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer .footer-bottom {
+  background-color: #222;
+  color: #ccc;
+  padding: 20px;
+}
+
+footer .license-info {
+  font-size: 0.8em;
+}

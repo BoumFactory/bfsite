@@ -6,7 +6,7 @@ import textwrap
 
 
 # Dossiers et fichiers à exclure (similaires au script précédent)
-EXCLUDE_DIRS = {"node_modules", "college", "lycee", "logiciels", ".next", "dist", ".git", ".vscode"}
+EXCLUDE_DIRS = {"node_modules","modules", "college", "lycee", "logiciels", ".next", "dist", ".git", ".vscode"}
 EXCLUDE_FILES = {"package-lock.json", ".gitignore", ".DS_Store", "find_todos.py"}
 EXCLUDE_PREFIXES = (".eslint",)
 
@@ -26,6 +26,8 @@ patterns = [
 
 def get_todos():
     todos = []
+    # Ensemble pour stocker (chemin_rel, ligne) déjà vus
+    seen = set()
 
     # Parcours récursif à partir du répertoire courant
     for root, dirs, files in os.walk("."):
@@ -41,29 +43,38 @@ def get_todos():
             except Exception:
                 continue
 
-            # Pour chaque pattern, rechercher toutes les occurences dans le contenu du fichier
+            # Pour chaque pattern, rechercher toutes les occurrences dans le contenu du fichier
             for typ, pattern in patterns:
                 for match in pattern.finditer(content):
                     todo_text = match.group(1).strip()
+                    
                     # Pour les cas multi-lignes (types 2 et 4), on remplace les retours à la ligne par un espace
                     if typ in (2, 4):
                         todo_text = re.sub(r'\s+', ' ', todo_text)
-                    # Déterminer le numéro de ligne en comptant les sauts de ligne avant le début du match
+                    
+                    # Déterminer le numéro de ligne en comptant les sauts de ligne
                     line_number = content[:match.start()].count('\n') + 1
+                    
+                    # Récupération date de modification
                     try:
                         mod_time = os.path.getmtime(file_path)
                         mod_date = datetime.datetime.fromtimestamp(mod_time).strftime("le %d/%m/%Y à %Hh %Mm %Ss")
                     except Exception:
                         mod_date = "Inconnue"
-                    # Récupérer le nom du dossier parent
-                    parent_dir = os.path.basename(os.path.dirname(file_path)) if os.path.dirname(file_path) not in ["", "."] else "."
+                    
+                    # Chemin relatif
                     rel_path = os.path.relpath(file_path, ".")
+                    
+                    # Vérifier si déjà vu (même fichier, même ligne)
+                    if (rel_path, line_number) in seen:
+                        continue
+                    seen.add((rel_path, line_number))
+                    
                     todos.append((todo_text, rel_path, line_number, mod_date))
 
     # Tri des résultats par chemin de fichier puis par numéro de ligne
-    todos.sort(key=lambda x: (x[1], x[3]))
+    todos.sort(key=lambda x: (x[1], x[2]))
     return todos
-
 def wrap_cell(text, max_width):
     """
     Transforme le contenu d'une cellule (chaîne) en une liste de lignes,

@@ -50,6 +50,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
                   Contact
                 </Link>
               </li>
+              <li className="px-4 py-2 hover:bg-gray-700">
+                <Link href="/ExerciceInteractif" className="block">
+                  Exercices interactifs
+                </Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-700">
+              <Link href="/exercice-editor">
+                  Editeur d'exercices
+              </Link>
+              </li>
               {/* D'autres liens pourront être ajoutés ici au fur et à mesure de l'avancement du projet */}
             </ul>
           </nav>
