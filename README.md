@@ -24,11 +24,13 @@ Le site sera accessible à [http://localhost:3000](http://localhost:3000)
 
 ## Pour les devs
 
-Script permettant d'afficher la structure du projet (dans bfsite) : .\dev_tools\listing_activities.ps1
+# Script permettant d'afficher la structure du projet (dans bfsite) : 
+.\dev_tools\listing_activities.ps1
 
-Script permettant d'afficher la liste de TODOS (dans bfsite) : python dev_tools/find_todos.py
+# Script permettant d'afficher la liste de TODOS (dans bfsite) : 
+python dev_tools/find_todos.py
 
-Script permettant d'indexer les fichiers de public/files et de générer le json qui contientra ses tags : 
+# Script permettant d'indexer les fichiers de public/files et de générer le json qui contientra ses tags : 
 python dev_tools/indexing_public_files.py
 
-fichier de sortie : pages\files_index.json
+cela générera l'indexation dans le fichier de sortie : pages\files_index.json

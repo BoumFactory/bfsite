@@ -1,0 +1,177 @@
+[
+    {
+        "title": "Notation scientifique - Préfixes",
+        "code": "Puissances",
+        "competence": "Utilisation des puissances de 10 et des préfixes",
+        "tags": [
+            "notation scientifique",
+            "préfixes",
+            "puissances de 10"
+        ],
+        "difficulte": 1,
+        "instructions": "",
+        "questions": [
+            {
+                "instructions": "Trouver la puissance de 10 correspondant aux préfixes suivants.",
+                "variables":{
+                    "numa":"47.5",
+                    "numb":"12.4",
+                    "calcc": "\\begin{commande}{calcul} sqrt(\\numa^2+\\numb^2),2\\end{commande}"
+                },
+                "options":{
+
+                },
+                "script":{
+
+                },
+                "latex": [
+                    " test \\begin{commande}{calcul} sqrt(\\numa/\\numb^2),2\\end{commande}",
+                    " test \\fpeval{sqrt(\\numa/\\numb^2),2}",
+                    "\\begin{tikzpicture}data/files/exercices/4eme/exo_test/enonce_TOOLS_results.ggb\\end{tikzpicture} \n\\begin{center}Titre de qualité ! \\end{center} \n \\begin{multicols}{2}\\begin{boite}[Un test de boite :,red]\\begin{enumerate}\\item Un premier test \\calcc \\item Un second \\item Un dernier \\end{enumerate} \\end{boite} \\columnbreak \\begin{itemize} \\item Un premier test \\tcfillcrep{} \\item Un second \\item Un dernier \\end{itemize}\\end{multicols} \n kilo \\tcfillcrep{} \\hfill \\liste{kilomètres;mètres;centimètres} \\hfill ceci est \\acc{accentué} et pas le reste.",
+                    "\\begin{minipage}{0.475 \\textwidth}téra \\tcfillcrep{} \\end{minipage} \\begin{minipage}{0.475 \\textwidth}\\begin{tabular}{c|c} Allo & \\(14 \\times 5\\)\\\\ \\hline Truc & \\tcfillcrep{}\\end{tabular}\\end{minipage}",
+                    "test : \\numa"
+                ],
+                "points": 0,
+                "correction": [
+                    "test|\\text{test}",
+                    "\\(10^3\\)",
+                    "mètres",
+                    "\\(10^{12}\\)",
+                    "5"
+                ]
+            },
+            {
+                "instructions": "Donner la notation scientifique des nombres suivants.",
+                "latex": [
+                    "\\begin{multicols}{2}\\(0{,}010\\,5 = \\) \\tcfillcrep{}\\end{multicols}",
+                    "\\(890 = \\) \\tcfillcrep{}"
+                ],
+                "points": 0,
+                "correction": [
+                    "\\(0{,}010\\,5 = 1{,}05\\times 10^{-2}\\)",
+                    "\\(890 = 8{,}9\\times 10^{2}\\)"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Notation scientifique",
+        "code": "Puissances",
+        "competence": "Conversion de notation scientifique en écriture décimale",
+        "tags": [
+            "notation scientifique",
+            "puissances",
+            "écriture décimale"
+        ],
+        "difficulte": 1,
+        "instructions": "Donner le résultat des calculs suivants en écriture décimale.",
+        "questions": [
+            {
+                "instructions": null,
+                "latex": [
+                    "\\(75{,}4 \\times 10^{5} = \\) \\tcfillcrep{}"
+                ],
+                "points": 1,
+                "correction": [
+                    "7540000"
+                ]
+            },
+            {
+                "instructions": null,
+                "latex": [
+                    "\\(8 \\times 10^{-3} = \\) \\tcfillcrep{}"
+                ],
+                "points": 1,
+                "correction": [
+                    "0{,}008"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Règles d'opérations sur les puissances",
+        "code": "Puissances",
+        "competence": "Manipulation des puissances",
+        "tags": [
+            "puissances",
+            "opérations",
+            "mathématiques"
+        ],
+        "difficulte": 1,
+        "instructions": "Écrire sous la forme \\(a^n\\).",
+        "questions": [
+            {
+                "instructions": "Utiliser les règles des puissances pour simplifier.",
+                "latex": [
+                    "A = \\((-2)^{3}\\times (-2)^{2} = \\) \\tcfillcrep{}"
+                ],
+                "points": 1,
+                "correction": [
+                    "\\((-2)^{3+2} = (-2)^{5}\\)"
+                ]
+            },
+            {
+                "instructions": "Utiliser les règles des puissances pour simplifier.",
+                "latex": [
+                    "B = \\(\\dfrac{9^{5}}{9^{4}} = \\) \\tcfillcrep{}"
+                ],
+                "points": 1,
+                "correction": [
+                    "\\(9^{5-4} = 9^{1}\\)"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Programmes de calcul",
+        "code": "4L12",
+        "competence": "Calcul littéral",
+        "tags": [
+            "programmes de calcul",
+            "calcul littéral"
+        ],
+        "difficulte": 2,
+        "instructions": "On considère les programmes de calcul suivants :",
+        "questions": [
+            {
+                "instructions": "Tester ces programmes avec le nombre 5.",
+                "latex": [
+                    "\\textbf{Programme A :}",
+                    "5 \\times 6 = 30",
+                    "30 -52 = \\tcfillcrep{}",
+                    "\\textbf{Programme B :}",
+                    "5 -9 = -4",
+                    "-4 \\times 6 = -24",
+                    "-24 + 2 = \\tcfillcrep{}"
+                ],
+                "points": 1,
+                "correction": [
+                    "30 - 52 = -22",
+                    "-24 + 2 = -22"
+                ]
+            },
+            {
+                "instructions": "Prouver que les deux programmes donnent le même résultat peu importe le nombre choisi au départ.",
+                "latex": [
+                    "Appliquons ces deux programmes de calcul à un nombre noté \\(x\\):",
+                    "\\(\\textbf{Programme A :}\\)",
+                    "Etape 1 : \\tcfillcrep{}",
+                    "Etape 2 : \\tcfillcrep{}",
+                    "\\(\\textbf{Programme B :}\\)",
+                    "Etape 1 : \\tcfillcrep{}",
+                    "Etape 2 : \\tcfillcrep{} = \\tcfillcrep{} \\(\\text{(Développer.. )}\\)",
+                    "Etape 3 :  \\tcfillcrep{}"
+                ],
+                "points": 2,
+                "correction": [
+                    "\\(6x\\)",
+                    "\\(6x -52 \\)",
+                    "\\(x -9\\)",
+                    "\\(6(x -9)\\)",
+                    "\\(6x -54\\)",
+                    "\\(6x -52\\)"
+                ]
+            }
+        ]
+    }
+]
