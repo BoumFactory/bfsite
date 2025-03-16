@@ -1,0 +1,99 @@
+{
+  "theme": "Arithmétique",
+  "niveau": "3eme",
+  "title": "Test de primalité",
+  "code": "TP01",
+  "competence": "Détermination si un nombre est premier ou non",
+  "tags": [
+    "nombres premiers",
+    "divisibilité",
+    "justification"
+  ],
+  "difficulte": 2,
+  "instructions": "Pour chaque nombre proposé, indiquez s'il est premier ou non. Si le nombre n'est pas premier, justifiez en indiquant un diviseur non trivial.",
+  "questions": [
+    {
+      "instructions": "Déterminez si le nombre affiché est premier. S'il ne l'est pas, justifiez en indiquant un diviseur non trivial.",
+      "variables": [
+        {
+          "key": "n",
+          "defaultValue": "35",
+          "constructor": "ExoNumber",
+          "constructorDef": "int"
+        }
+      ],
+      "options": "",
+      "script": "",
+      "latex": [
+        "Le nombre \\(\\n\\) est-il premier ? \\tcfillcrep{}",
+        "Si ce n'est pas le cas, justifiez en indiquant un diviseur non trivial : \\tcfillcrep{}"
+      ],
+      "correction": [
+        "35 n'est pas premier car 35 = 5 \\times 7."
+      ],
+      "points": 1
+    },
+    {
+      "instructions": "Déterminez si le nombre affiché est premier.",
+      "variables": [
+        {
+          "key": "n",
+          "defaultValue": "71",
+          "constructor": "ExoNumber",
+          "constructorDef": "int"
+        }
+      ],
+      "options": "",
+      "script": "",
+      "latex": [
+        "Le nombre \\(\\n\\) est-il premier ? \\tcfillcrep{}"
+      ],
+      "correction": [
+        "71 est un nombre premier."
+      ],
+      "points": 1
+    },
+    {
+      "instructions": "Déterminez si le nombre affiché est premier. S'il ne l'est pas, justifiez en indiquant un diviseur non trivial.",
+      "variables": [
+        {
+          "key": "n",
+          "defaultValue": "66",
+          "constructor": "ExoNumber",
+          "constructorDef": "int"
+        }
+      ],
+      "options": "",
+      "script": "",
+      "latex": [
+        "Le nombre \\(\\n\\) est-il premier ? \\tcfillcrep{}",
+        "Si ce n'est pas le cas, justifiez en indiquant un diviseur non trivial : \\tcfillcrep{}"
+      ],
+      "correction": [
+        "66 n'est pas premier car 66 = 2 \\times 33."
+      ],
+      "points": 1
+    },
+    {
+      "instructions": "Déterminez si le nombre affiché est premier. S'il ne l'est pas, justifiez en indiquant un diviseur non trivial.",
+      "variables": [
+        {
+          "key": "n",
+          "defaultValue": "99",
+          "constructor": "ExoNumber",
+          "constructorDef": "int"
+        }
+      ],
+      "options": "",
+      "script": "",
+      "latex": [
+        "Le nombre \\(\\n\\) est-il premier ? \\tcfillcrep{}",
+        "Si ce n'est pas le cas, justifiez en indiquant un diviseur non trivial : \\tcfillcrep{}"
+      ],
+      "correction": [
+        "99 n'est pas premier car 99 = 9 \\times 11."
+      ],
+      "points": 1
+    }
+  ]
+}

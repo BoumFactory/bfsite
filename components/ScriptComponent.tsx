@@ -213,12 +213,17 @@ export default function ScriptComponent({ file }: { file: string }) {
         const mf = document.createElement("math-field");
         mf.setAttribute("virtual-keyboard-mode", "manual");
         mf.setAttribute("smart-mode", "true");
-        mf.style.minWidth = "10cm";
+        // Nouveaux styles pour que le champ s'adapte correctement
+        mf.style.width = "50%";          // Utilise toute la largeur disponible
+        mf.style.minHeight = "2em";
+        mf.style.minWidth = "2em";       // Taille minimale plus grande
         mf.style.fontSize = "1.2em";
         // Nouvelle bordure noire plus marquée :
         mf.style.border = "2px solid black";
         mf.style.borderRadius = "4px";
         mf.style.padding = "0.2em";
+        mf.style.display = "inline-block"; // Meilleur comportement de layout
+        mf.style.boxSizing = "border-box"; // Pour que padding soit inclus dans width
         if (userAnswers[exoIndex][qIndex] && userAnswers[exoIndex][qIndex][fieldIndex] !== undefined) {
           mf.value = userAnswers[exoIndex][qIndex][fieldIndex];
         }
