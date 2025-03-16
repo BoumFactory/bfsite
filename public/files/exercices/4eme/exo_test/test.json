@@ -1,0 +1,55 @@
+{
+    "title": "Notation scientifique - Préfixes",
+    "code": "Puissances",
+    "competence": "Utilisation des puissances de 10 et des préfixes",
+    "tags": [
+        "notation scientifique",
+        "préfixes",
+        "puissances de 10"
+    ],
+    "difficulte": 1,
+    "instructions": "",
+    "questions": [
+        {
+            "instructions": "Trouver la puissance de 10 correspondant aux préfixes suivants.",
+            "variables":{
+                "numa":"47.5",
+                "numb":"12.4",
+                "calcc": "\\begin{commande}{calcul} sqrt(\\numa^2+\\numb^2),2\\end{commande}"
+            },
+            "options":{
+
+            },
+            "script":{
+
+            },
+            "latex": [
+                " test \\begin{commande}{calcul} sqrt(\\numa/\\numb^2),2\\end{commande}",
+                " test \\fpeval{sqrt(\\numa/\\numb^2),2}",
+                "\\begin{tikzpicture}data/files/exercices/4eme/exo_test/enonce_TOOLS_results.ggb\\end{tikzpicture} \n\\begin{center}Titre de qualité ! \\end{center} \n \\begin{multicols}{2}\\begin{boite}[Un test de boite :,red]\\begin{enumerate}\\item Un premier test \\calcc \\item Un second \\item Un dernier \\end{enumerate} \\end{boite} \\columnbreak \\begin{itemize} \\item Un premier test \\tcfillcrep{} \\item Un second \\item Un dernier \\end{itemize}\\end{multicols} \n kilo \\tcfillcrep{} \\hfill \\liste{kilomètres;mètres;centimètres} \\hfill ceci est \\acc{accentué} et pas le reste.",
+                "\\begin{minipage}{0.475 \\textwidth}téra \\tcfillcrep{} \\end{minipage} \\begin{minipage}{0.475 \\textwidth}\\begin{tabular}{c|c} Allo & \\(14 \\times 5\\)\\\\ \\hline Truc & \\tcfillcrep{}\\end{tabular}\\end{minipage}",
+                "test : \\numa"
+            ],
+            "points": 0,
+            "correction": [
+                "test|\\text{test}",
+                "\\(10^3\\)",
+                "mètres",
+                "\\(10^{12}\\)",
+                "5"
+            ]
+        },
+        {
+            "instructions": "Donner la notation scientifique des nombres suivants.",
+            "latex": [
+                "\\begin{multicols}{2}\\(0{,}010\\,5 = \\) \\tcfillcrep{}\\end{multicols}",
+                "\\(890 = \\) \\tcfillcrep{}"
+            ],
+            "points": 0,
+            "correction": [
+                "\\(0{,}010\\,5 = 1{,}05\\times 10^{-2}\\)",
+                "\\(890 = 8{,}9\\times 10^{2}\\)"
+            ]
+        }
+    ]
+}

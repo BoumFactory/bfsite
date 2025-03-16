@@ -16,7 +16,13 @@ Ce projet est un site web destiné aux enseignants de mathématiques pour partag
    
    npm install
    
-4. Démarrez le projet en local :
+4. Renseigner une clé api openAI pour utiliser les fonctionnalités IA :
+
+   créer un fichier nommé '.env' dans 'bfsite'. 
+   Renseigner votre clé api dans ce fichier de la façon suivante : 
+   OPENAI_API_KEY=votre-clef-api
+
+5. Démarrez le projet en local :
    
    npm run dev
 

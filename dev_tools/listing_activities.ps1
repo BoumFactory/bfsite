@@ -1,4 +1,4 @@
-$exclude = @("node_modules","college", "lycee", "logiciels", ".next", "dist", "package-lock.json", ".git", ".vscode", ".eslint*", ".gitignore", ".DS_Store")
+$exclude = @("node_modules","college","modules", "lycee", "logiciels", ".next", "dist", "package-lock.json", ".git", ".vscode", ".eslint*", ".gitignore", ".DS_Store")
 
 function Get-Tree {
     param (
